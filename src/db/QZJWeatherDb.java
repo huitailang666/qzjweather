@@ -21,7 +21,7 @@ public class QZJWeatherDb {
 	/**
 	 * 数据库名
 	 */
-	public static final String DB_NAME="qzj_weather";
+	public static final String DB_NAME="qzj_weather6";
 	
 	/**
 	 * 数据库版本

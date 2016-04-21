@@ -2,6 +2,10 @@ package com.example.qzjweather.test;
 
 import java.util.List;
 
+import util.HttpCallBackListener;
+import util.HttpUtil;
+import util.JsonUtils;
+
 import model.City;
 import model.County;
 import model.Province;
@@ -95,7 +99,7 @@ public class DbTest extends AndroidTestCase {
 	 */
 	public void testDb4(){
 		QZJWeatherDb qzjWeatherDb=QZJWeatherDb.getInstance(getContext());
-		List<City> list=qzjWeatherDb.loadCities(1);
+		List<City> list=qzjWeatherDb.loadCities(9);
 		Log.d("testDb4", ""+list.toString());
 		
 	}
@@ -133,4 +137,28 @@ public class DbTest extends AndroidTestCase {
 		
 	}
 	
+	/**单元测试不能访问网络 d
+	 * 测试Http请求util
+	 */
+	public void testSendHttpRequest(){
+		final String path="http://www.sinaimg.cn/dy/slidenews/1_img/2016_15/45272_679986_493684.jpg";
+		
+		HttpUtil.sendHttpRequest(path, new HttpCallBackListener() {
+			
+			@Override
+			public void onFinish(String response) {
+				// TODO Auto-generated method stub
+				Log.d("testSendHttpRequest", ""+response);
+			}
+			
+			@Override
+			public void onError(Exception e) {
+				// TODO Auto-generated method stub
+				Log.d("testSendHttpRequest", "error");
+			}
+		});
+
+	}
+	
+
 }

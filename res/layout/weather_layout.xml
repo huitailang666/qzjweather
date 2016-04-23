@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#00ff00"
+        >
+        
+        <TextView 
+            android:id="@+id/city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:text="city"
+        
+            />
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        
+        <LinearLayout 
+            android:id="@+id/weather_info_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical" 
+            
+            >
+            
+            
+  
+                <TextView
+		        android:id="@+id/current_date"
+		        android:layout_width="wrap_content"
+		        android:layout_height="40dp"
+		        android:gravity="left"
+		        android:layout_marginRight="10sp"
+		        android:textColor="#000000"
+		        android:textSize="18sp"
+		        android:text="current_date"
+		         />
+                
+                
+            
+            <TextView
+		        android:id="@+id/weather_desp"
+		        android:layout_width="wrap_content"
+		        android:layout_height="60dp"
+		        
+		        android:textColor="#000000"
+		        android:textSize="40sp"
+		        android:text="weather_desp"
+		         />
+            
+            <TextView
+		        android:id="@+id/wind_desp"
+		        android:layout_width="wrap_content"
+		        android:layout_height="50dp"
+		        
+		        android:textColor="#000000"
+		        android:textSize="26sp"
+		        android:text="wind_desp"
+		         />
+            
+            
+                
+                <TextView
+                    android:id="@+id/temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="temp"
+                    android:textColor="#000000"
+                    android:textSize="36sp" />
+                
+             
+                
+       
+            
+             <TextView
+		        android:id="@+id/pm2.5"
+		        android:layout_width="wrap_content"
+		        android:layout_height="50dp"
+		        
+		        android:textColor="#000000"
+		        android:textSize="26sp"
+		        android:text="pm2.5"
+		         />
+            
+            
+           
+            
+        </LinearLayout>
+        
+        <TextView
+		        android:id="@+id/publish_time"
+		        android:layout_width="wrap_content"
+		        android:layout_height="40dp"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignParentBottom="true"
+		        android:layout_marginLeft="10sp"
+		        android:textColor="#000000"
+		        android:textSize="18sp"
+		        android:text="publish_time"
+		         />
+        
+    </RelativeLayout>
+
+    
+
+</LinearLayout>
